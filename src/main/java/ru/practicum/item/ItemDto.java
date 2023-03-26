@@ -8,8 +8,8 @@ import java.util.Set;
 
 @Entity
 @Data
-@Table(name = "items", schema = "public")
-class Item {
+@Table(name = "itemsDto", schema = "public")
+public class ItemDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

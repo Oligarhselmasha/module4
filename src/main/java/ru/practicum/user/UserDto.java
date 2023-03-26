@@ -3,13 +3,10 @@ package ru.practicum.user;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.Instant;
-
 @Entity
 @Data
-@Table(name = "users", schema = "public")
-public class User {
-
+@Table(name = "usersDto", schema = "public")
+public class UserDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +20,7 @@ public class User {
     private String lastName;
 
     @Column(name = "registration_date")
-    private Instant registrationDate = Instant.now();
+    private String registrationDate;
 
     @Enumerated(EnumType.STRING)
     private UserState state;
